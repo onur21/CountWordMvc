@@ -1,0 +1,23 @@
+﻿@{  
+ViewBag.Title = "Index";  
+Layout = "~/Views/Shared/_Layout.cshtml";  
+}  
+@using ClassLibrary1.External.Models;  
+@model IEnumerable<ClassLibrary1.External.Models.Words> 
+    <center><h2>Moby Dick En Çok Kullanılan 10 Kelime</h2>  </center> 
+
+<table class="table table-bordered">  
+<tr>  
+<th>Words</th>  
+  
+</tr>  
+@foreach (var item in Model)  
+{  
+<tr>  
+<td>  
+@Html.DisplayFor(modelItem => item.word)  
+</td>  
+ 
+</tr>  
+}  
+</table>  
